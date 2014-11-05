@@ -4,7 +4,7 @@ python:
 install: "pip install -r requirements.txt"
 before_script:
 - autopep8 -ir *
-- flake8 --max-complexity=6 --exclude=*.txt,*.md --max-line-length=200 *
+- flake8 --max-complexity=18 --exclude=*.txt,*.md --max-line-length=200 *
 script:
 - cd UnitTest
 - python Tenis_Game.py
