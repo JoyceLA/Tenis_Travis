@@ -1,168 +1,79 @@
 # -*- coding: utf8 -*-
+#!/usr/bin/env python
+
+import unittest
+from tennis import tennis
 
 
+class Test_Tenis(unittest.TestCase):
 
-"""
-SIMULANDO UN JUEGO DE TENNIS
->>> ingresarTotalJuegos(2)
->>> mostrar_score()
-'[0-0]'
->>> anotar(1,0)
-''
->>> mostrar_score()
-'[15-0]'
->>> anotar(0,1)
-''
->>> mostrar_score()
-'[15-15]'
->>> anotar(1,0)
-''
->>> mostrar_score()
-'[30-15]'
->> anotar(0,1)
-''
->>> mostrar_score()
-'[30-30]'
->>> anotar(1,0)
-''
->>> mostrar_score()
-'[40-30]'
->>> anotar(0,1)
-'deuse'
->>> mostrar_score()
-'[40-40]'
->>> anotar(1,0)
-'[advantage-40]'
->>> mostrar_score()
-'[50-40]'
->>> anotar(1,0)
-'[set-40]'
->>> mostrar_score()
-'[60-40]'
->>> mostrar_score()
-'[0-0]'
->>> anotar(1,0)
-''
->>> mostrar_score()
-'[15-0]'
->>> anotar(0,1)
-''
->>> mostrar_score()
-'[15-15]'
->>> anotar(1,0)
-''
->>> mostrar_score()
-'[30-15]'
->>> anotar(0,1)
-''
->>> mostrar_score()
-'[30-30]'
->>> anotar(1,0)
-''
->>> mostrar_score()
-'[40-30]'
->>> anotar(0,1)
-'deuse'
->>> mostrar_score()
-'[40-40]'
->>> anotar(1,0)
-'[advantage-40]'
->>> mostrar_score()
-'[50-40]'
->>> anotar(1,0)
-'[set-40]'
->>> mostrar_score()
-'[60-40]'
+    def setUp(self):
+        self.tenis = tennis()
 
-"""
-total = 0
-numjuego = 0
+    def test_mostrar_score_0_0(self):
+        self.assertEqual('[0-0]', self.tenis.mostrar_score())
 
-	
-player1 = 0
-player2 = 0
-vuelta1 = 0
-vuelta2 = 0
-puntos1 = 0
-puntos2 = 0
-extra1 = 0
-extra2 = 0
-info = ""
+    def test_anotaJugador_1_0(self):
+        self.assertEqual('', self.tenis.anotar(1, 0))
 
-def ingresarTotalJuegos(cantidad): 
-	numjuego,total
-	numjuego = cantidad
-	total = cantidad
+    def test_mostrar_score_1_0(self):
+        self.tenis.anotar(1, 0)
+        self.assertEqual('[15-0]', self.tenis.mostrar_score())
 
+    def test_anotaJugador_1_1(self):
+        self.assertEqual('', self.tenis.anotar(1, 1))
 
-def mostrar_score():
-	print "["+str(player1)+"-"+str(player2)+"]"
+    def test_mostrar_score_1_1(self):
+        self.tenis.anotar(1, 1)
+        self.assertEqual('[15-15]', self.tenis.mostrar_score())
 
-def anotar(play1, play2):
-	info = ""
-	global player1,player2,vuelta1,vuelta2,puntos1,puntos2,extra1,extra2,gameP1,gameP2
-	
-	
-	if vuelta1 <= 1:
-		puntos1 = 15
-	if vuelta2 <= 1:
-		puntos2 = 15
-	if vuelta1 >= 2:
-		puntos1 = 10
-	if vuelta2 >=2:
-		puntos2 = 10
-	
-	if play1 == 1: #Anoto el jugador 1
-		player1 += puntos1
-		vuelta1 += 1
-	elif play2 == 1: #Anoto el jugador 2
-		player2 += puntos2
-		vuelta2 += 1
+    def test_anotaJugador_2_1(self):
+        self.assertEqual('', self.tenis.anotar(2, 1))
 
-	gana1  = 0
-	gana2 = 0
-	start = numjuego
-	if player1 >= 40 or player2 >= 40:
-		
-		game = player1 - player2
-		
-		if game == (20*total):
-			print "GANO EL JUGADOR 1"
-		elif (-1*game) == (20*total):
-			print "GANO EL JUGADOR 2"
-		if player1 == player2:
-			info= "deuse"
-		elif player1 > player2:
-			info=  "[advantage-"+str(player2)+"]"
-			gana1 = player1-player2
-		
-		elif player1 < player2:
-			info=  "["+str(player1)+"-advantage]"
-			gana2 = player2-player1
-		
-		if gana1 == 20:
-			info=  "[set-"+str(player2)+"]"
-			numjuego -= 1
-			
-		elif gana2== 20:
-			info=  "["+str(player1)+"-set]"
-			numjuego -=1
-			print "NUMERO "+str(numjuego)+info
+    def test_mostrar_score_2_1(self):
+        self.tenis.anotar(2, 1)
+        self.assertEqual('[30-15]', self.tenis.mostrar_score())
 
-		
-		
-	
-		
-		
-	
-	
+    def test_anotaJugador_2_2(self):
+        self.assertEqual('', self.tenis.anotar(2, 2))
 
+    def test_mostrar_score_2_2(self):
+        self.tenis.anotar(2, 2)
+        self.assertEqual('[30-30]', self.tenis.mostrar_score())
 
+    def test_anotaJugador_3_2(self):
+        self.assertEqual('', self.tenis.anotar(3, 2))
 
+    def test_mostrar_score_3_2(self):
+        self.tenis.anotar(3, 2)
+        self.assertEqual('[40-30]', self.tenis.mostrar_score())
 
+    def test_anotaJugador_3_3(self):
+        self.assertEqual('deuse', self.tenis.anotar(3, 3))
 
+    def test_mostrar_score_3_3(self):
+        self.tenis.anotar(3, 3)
+        self.assertEqual('[40-40]', self.tenis.mostrar_score())
 
+    def test_anotaJugador_4_3(self):
+        self.assertEqual('[advantage-40]', self.tenis.anotar(4, 3))
 
+    def test_anotaJugador_4_5(self):
+        self.assertEqual('[50-advantage]', self.tenis.anotar(4, 5))
 
+    def test_mostrar_score_4_3(self):
+        self.tenis.anotar(4, 3)
+        self.assertEqual('[50-40]', self.tenis.mostrar_score())
 
-		
+    def test_anotaJugador_5_3(self):
+        self.assertEqual('[set-40]', self.tenis.anotar(5, 3))
+
+    def test_anotaJugador_3_4(self):
+        self.assertEqual('[40-set]', self.tenis.anotar(3, 5))
+
+    def test_mostrar_score_5_3(self):
+        self.tenis.anotar(5, 3)
+        self.assertEqual('[60-40]', self.tenis.mostrar_score())
+
+if __name__ == "__main__":
+    unittest.main()
