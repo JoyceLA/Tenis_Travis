@@ -1,46 +1,6 @@
 # -*- coding: utf8 -*-
 #!/usr/bin/env python
 
-"""
-SIMULANDO UN JUEGO DE TENNIS
->>> mostrar_score()
-'[0-0]'
->>> anotar(1,0)
-''
->>> mostrar_score()
-'[15-0]'
->>> anotar(1,1)
-''
->>> mostrar_score()
-'[15-15]'
->>> anotar(2,1)
-''
->>> mostrar_score()
-'[30-15]'
->>> anotar(2,2)
-''
->>> mostrar_score()
-'[30-30]'
->>> anotar(3,2)
-''
->>> mostrar_score()
-'[40-30]'
->>> anotar(3,3)
-'deuse'
->>> mostrar_score()
-'[40-40]'
->>> anotar(4,3)
-'[advantage-40]'
->>> mostrar_score()
-'[50-40]'
->>> anotar(5,3)
-'[set-40]'
->>> mostrar_score()
-'[60-40]'
-
-"""
-
-
 class tennis():
 
     def __init__(self):
@@ -94,10 +54,3 @@ class tennis():
 
     def mostrar_score(self):
         return "[" + str(self.player1) + "-" + str(self.player2) + "]"
-'''
-t=tennis()
-t.anotar(1,0)
-t.anotar(2,0)
-
-print t.mostrar_score()
-'''
