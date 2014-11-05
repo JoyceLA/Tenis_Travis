@@ -3,117 +3,77 @@
 
 
 """
-	SIMULANDO UN JUEGO DE TENNIS
-	>>> ingresarTotalJuegos(2)
-	>>> mostrar_score()
-	'[0-0]'
-	>>> anotar(1,0)
-	''
-	>>> mostrar_score()
-	'[15-0]'
-	>>> anotar(0,1)
-	''
-	>>> mostrar_score()
-	'[15-15]'
-	>>> anotar(1,0)
-	''
-	>>> mostrar_score()
-	'[30-15]'
-	>>> anotar(0,1)
-	''
-	>>> mostrar_score()
-	'[30-30]'
-	>>> anotar(1,0)
-	''
-	>>> mostrar_score()
-	'[40-30]'
-	>>> anotar(0,1)
-	'deuse'
-	>>> mostrar_score()
-	'[40-40]'
-	>>> anotar(1,0)
-	'[advantage-40]'
-	>>> mostrar_score()
-	'[50-40]'
-	>>> anotar(1,0)
-	'[set-40]'
-	>>> mostrar_score()
-	'[60-40]'
+SIMULANDO UN JUEGO DE TENNIS
+>>> ingresarTotalJuegos(2)
+>>> mostrar_score()
+'[0-0]'
+>>> anotar(1,0)
+''
+>>> mostrar_score()
+'[15-0]'
+>>> anotar(0,1)
+''
+>>> mostrar_score()
+'[15-15]'
+>>> anotar(1,0)
+''
+>>> mostrar_score()
+'[30-15]'
+>> anotar(0,1)
+''
+>>> mostrar_score()
+'[30-30]'
+>>> anotar(1,0)
+''
+>>> mostrar_score()
+'[40-30]'
+>>> anotar(0,1)
+'deuse'
+>>> mostrar_score()
+'[40-40]'
+>>> anotar(1,0)
+'[advantage-40]'
+>>> mostrar_score()
+'[50-40]'
+>>> anotar(1,0)
+'[set-40]'
+>>> mostrar_score()
+'[60-40]'
+>>> mostrar_score()
+'[0-0]'
+>>> anotar(1,0)
+''
+>>> mostrar_score()
+'[15-0]'
+>>> anotar(0,1)
+''
+>>> mostrar_score()
+'[15-15]'
+>>> anotar(1,0)
+''
+>>> mostrar_score()
+'[30-15]'
+>>> anotar(0,1)
+''
+>>> mostrar_score()
+'[30-30]'
+>>> anotar(1,0)
+''
+>>> mostrar_score()
+'[40-30]'
+>>> anotar(0,1)
+'deuse'
+>>> mostrar_score()
+'[40-40]'
+>>> anotar(1,0)
+'[advantage-40]'
+>>> mostrar_score()
+'[50-40]'
+>>> anotar(1,0)
+'[set-40]'
+>>> mostrar_score()
+'[60-40]'
 
-	
-	>>> mostrar_score()
-	'[0-0]'
-	>>> anotar(1,0)
-	''
-	>>> mostrar_score()
-	'[15-0]'
-	>>> anotar(0,1)
-	''
-	>>> mostrar_score()
-	'[15-15]'
-	>>> anotar(1,0)
-	''
-	>>> mostrar_score()
-	'[30-15]'
-	>>> anotar(0,1)
-	''
-	>>> mostrar_score()
-	'[30-30]'
-	>>> anotar(1,0)
-	''
-	>>> mostrar_score()
-	'[40-30]'
-	>>> anotar(0,1)
-	'deuse'
-	>>> mostrar_score()
-	'[40-40]'
-	>>> anotar(1,0)
-	'[advantage-40]'
-	>>> mostrar_score()
-	'[50-40]'
-	>>> anotar(1,0)
-	'[set-40]'
-	>>> mostrar_score()
-	'[60-40]'
-	
-
-	>>> mostrar_score()
-	'[0-0]'
-	>>> anotar(1,0)
-	''
-	>>> mostrar_score()
-	'[15-0]'
-	>>> anotar(0,1)
-	''
-	>>> mostrar_score()
-	'[15-15]'
-	>>> anotar(1,0)
-	''
-	>>> mostrar_score()
-	'[30-15]'
-	>>> anotar(0,1)
-	''
-	>>> mostrar_score()
-	'[30-30]'
-	>>> anotar(1,0)
-	''
-	>>> mostrar_score()
-	'[40-30]'
-	>>> anotar(0,1)
-	'deuse'
-	>>> mostrar_score()
-	'[40-40]'
-	>>> anotar(1,0)
-	'[advantage-40]'
-	>>> mostrar_score()
-	'[50-40]'
-	>>> anotar(1,0)
-	'[set-40]'
-	>>> mostrar_score()
-	'[60-40]'
-	
-
-	
 """
 total = 0
 numjuego = 0
