@@ -7,6 +7,6 @@ before_script:
 - flake8 --max-complexity=18 --exclude=*.txt,*.md --max-line-length=200 *
 script:
 - cd UnitTest
-- python Tenis_Game.py
-- coverage run --branch Tenis_Game.py
+- python Test_Tenis.py
+- coverage run --branch Test_Tenis.py
 - coverage report -m
